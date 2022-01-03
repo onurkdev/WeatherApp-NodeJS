@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e)=> {
     console.log(location)
     message1.textContent="Loading..."
     message2.textContent=""
-    fetch(`onurkdev-weatherapp-nodejs.herokuapp.com/weather?address=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                message1.textContent=data.error
